@@ -217,7 +217,7 @@
       position:'topright'
     }).addTo(map);
 
-    var searchControl = L.esri.Geocoding.Controls.geosearch({expanded: true, collapseAfterResult: false, zoomToResult: false}).addTo(map);
+    var searchControl = L.esri.Geocoding.geosearch({expanded: true, collapseAfterResult: false, zoomToResult: false}).addTo(map);
     
     searchControl.on('results', function(data){ 
       if (data.results.length > 0) {
