@@ -230,7 +230,10 @@
     });
     
     map.on('click', function(e) {
-      map.openPopup([e.latlng], ("You clicked the map at " + e.latlng));
+      var popup = L.popup()
+        .setLatLng(e.latlng)
+        .setContent('<p>You clicked the map at ' + e.latlng)
+        .openOn(map);
     });
   
   </script>
