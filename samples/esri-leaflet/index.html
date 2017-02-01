@@ -227,7 +227,11 @@
           .openOn(map);
         map.setView(data.results[0].latlng)
       }
-    })
+    });
+    
+    map.on('click', function(e) {
+      map.openPopup([e.latlng], ("You clicked the map at " + e.latlng);
+    });
   
   </script>
 
