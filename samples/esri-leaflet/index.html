@@ -82,29 +82,12 @@
       <span class="calcite-title-sub hidden-xs">Starter app for the Esri Leaflet API (jQuery)</span> 
     </div>
      <!-- Nav -->
-    <ul class="calcite-nav nav navbar-nav">                    
-          <li><div class="calcite-navbar-search hidden-xs"><div id="geocode"></div></div></li>
-          <li><div class="calcite-navbar-search calcite-search-expander"><div role="presentation" class="esri-search esri-widget" widgetid="searchNavDiv" id="searchNavDiv">
-      <div role="presentation" class="esri-search__container" data-dojo-attach-point="_containerNode">
-        <div role="button" title="Search in" id="searchNavDiv_menu_button" class="esri-search__sources-button esri-widget-button" tabindex="0" data-dojo-attach-point="_sourceButtonNode">
-          <span aria-hidden="true" role="presentation" class="esri-icon-down-arrow esri-search__sources-button--down"></span><span aria-hidden="true" role="presentation" class="esri-icon-up-arrow esri-search__sources-button--up"></span><span class="esri-search__source-name" data-dojo-attach-point="_sourceNameNode">Esri World Geocoder</span>
+    <ul class="nav navbar-nav calcite-nav">
+      <li>
+        <div class="calcite-navbar-search calcite-search-expander">
+          <div id="searchWidgetDiv"></div>
         </div>
-        <div data-dojo-attach-point="_sourcesNode" class="esri-menu esri-search__sources-menu" role="menu"></div>
-        <div class="esri-search__input-container">
-          <form class="esri-search__form" data-dojo-attach-point="_formNode" role="search">
-            <input aria-label="Search" maxlength="128" autocomplete="off" type="text" tabindex="0" class="esri-search__input" value="" aria-haspopup="true" id="searchNavDiv_input" data-dojo-attach-point="_inputNode" role="textbox" placeholder="Find address or place">
-          </form>
-          <div role="button" class="esri-search__clear-button esri-widget-button" tabindex="0" data-dojo-attach-point="_clearNode" title=""><span aria-hidden="true" class="esri-icon-close"></span><span aria-hidden="true" class="esri-icon-loading-indicator esri-rotating"></span>
-          </div>
-          <div data-dojo-attach-point="_suggestionsNode" class="esri-menu esri-search__suggestions-menu" role="menu"></div>
-        </div>
-        <div role="button" title="Search" class="esri-search__submit-button esri-widget-button" tabindex="0" data-dojo-attach-point="_submitNode">
-          <span aria-hidden="true" role="presentation" class="esri-icon-search"></span>
-          <span class="esri-icon-font-fallback-text">Search</span>
-        </div>
-        <div data-dojo-attach-point="_noResultsMenuNode" class="esri-menu esri-search__no-results-menu"></div>
-      </div>
-    </div></div></li>
+      </li>
     </ul>
   </nav><!--/.navbar -->
 
