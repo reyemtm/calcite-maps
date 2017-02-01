@@ -23,6 +23,10 @@
   <!--Leaflet 1.0.3-->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
   <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
+  
+  <!-- Leaflet Fullscreen-->
+  <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
   <!-- Esri Leaflet from CDN -- OLD>
   <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script-->
@@ -76,7 +80,8 @@
         <li><a role="button" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
         <li><a class="visible-xs" role="button" data-target="#panelSearch" aria-haspopup="true"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         <li><a role="button" data-target="#panelBasemaps" aria-haspopup="true"><span class="glyphicon glyphicon-th-large"></span> Basemaps</a></li>
-        <li><a role="button" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
+        <!--li><a role="button" id="calciteToggleNavbar" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li-->
+        <li><a role="button" id="calciteFullscreenToggle" aria-haspopup="true"><span class="glyphicon glyphicon-fullscreen"></span> Full Map</a></li>
       </ul>
     </div>
     <!-- Title -->
@@ -236,6 +241,11 @@
         .openOn(map);
     });
   
+    var toggleFullscreen = document.getElementById('calciteFullscreenToggle');
+    toggleFullscreen.addEventListener('click', function() {
+      map.toggleFullscreen() // Either go fullscreen, or cancel the existing fullscreen.
+    });
+    
   </script>
 
   <!-- ====== -->
