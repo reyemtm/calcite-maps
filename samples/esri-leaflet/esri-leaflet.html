@@ -17,16 +17,24 @@
   <link rel="stylesheet" href="../../dist/css/calcite-maps-esri-leaflet.min-v0.3.css">
   <link rel="stylesheet" href="../../dist/fonts/calcite/calcite-ui.css">
 
-  <!-- Leaflet from CDN-->
+  <!-- Leaflet from CDN-- This one is old>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.css" />
-  <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script>
+  <script src="//cdn.jsdelivr.net/leaflet/0.7.3/leaflet.js"></script-->
+  <!--Leaflet 1.0.3-->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.0.3/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
 
-  <!-- Esri Leaflet from CDN -->
-  <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script>
+  <!-- Esri Leaflet from CDN -- OLD>
+  <script src="//cdn.jsdelivr.net/leaflet.esri/1.0.0/esri-leaflet.js"></script-->
+  <!--Newest Esri Leaflet-->
+  <script src="https://unpkg.com/esri-leaflet@2.0.7"></script>
 
-  <!-- Esri Leaflet Geocoder -->
+  <!-- Esri Leaflet Geocoder -- OLD>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/leaflet.esri.geocoder/1.0.2/esri-leaflet-geocoder.css">
-  <script src="//cdn.jsdelivr.net/leaflet.esri.geocoder/1.0.2/esri-leaflet-geocoder.js"></script>
+  <script src="//cdn.jsdelivr.net/leaflet.esri.geocoder/1.0.2/esri-leaflet-geocoder.js"></script-->
+  <!-- Geocoding Control -->
+  <link rel="stylesheet" href="https://unpkg.com/esri-leaflet-geocoder@2.2.3/dist/esri-leaflet-geocoder.css">
+  <script src="https://unpkg.com/esri-leaflet-geocoder@2.2.3"></script>
 
   <style>
     html, body {
@@ -40,13 +48,13 @@
   </style>
 
 </head>
-<body class="calcite-maps calcite-nav-bottom calcite-layout-large-title">
+<body class="calcite-maps calcite-nav-top calcite-layout-large-title">
 
   <!-- Navbar -->
 
-  <nav class="navbar calcite-navbar navbar-fixed-top calcite-bg-light calcite-text-light calcite-bgcolor-green">
+  <nav class="navbar calcite-navbar navbar-fixed-top calcite-bg-light calcite-text-light">
      <!-- Menu -->
-    <div class="dropdown calcite-dropdown calcite-bg-custom calcite-text-light" role="presentation">
+    <div class="dropdown calcite-sidebar calcite-bg-custom calcite-text-light" role="presentation">
       <a class="dropdown-toggle" role="button" aria-haspopup="true" aria-expanded="false">
         <div class="calcite-dropdown-toggle">
           <span class="sr-only">Toggle dropdown menu</span>
@@ -56,7 +64,7 @@
           <span></span>
         </div>
       </a>
-      <ul class="dropdown-menu calcite-bgcolor-green">
+      <ul class="dropdown-menu">
         <li><a role="button" data-target="#panelInfo" aria-haspopup="true"><span class="glyphicon glyphicon-info-sign"></span> Info</a></li>
         <li><a class="visible-xs" role="button" data-target="#panelSearch" aria-haspopup="true"><span class="glyphicon glyphicon-search"></span> Search</a></li>
         <li><a role="button" data-target="#panelBasemaps" aria-haspopup="true"><span class="glyphicon glyphicon-th-large"></span> Basemaps</a></li>
@@ -83,7 +91,7 @@
 
   <!-- Panel -->
 
-  <div class="calcite-panels calcite-panels-left calcite-bg-custom calcite-text-light panel-group calcite-bgcolor-green" role="tablist" aria-multiselectable="true">
+  <div class="calcite-panels calcite-panels-left calcite-bg-custom calcite-text-light panel-group" role="tablist" aria-multiselectable="true">
   
     <!-- Info Panel -->
 
