@@ -199,8 +199,14 @@
     // Esri-Leaflet 
     // ============
 
-    var map = L.map('map', {zoomControl: false}).setView([45.52, -122.68], 12),
-      layer = L.esri.basemapLayer('NationalGeographic').addTo(map),
+    var map = L.map('map', {
+      zoomControl: false
+    }).setView([39, -81], 10),
+      OpenStreetMap = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+      }).addTo(map),
+      //layer = L.esri.basemapLayer('NationalGeographic').addTo(map),
       // layerLabels = L.esri.basemapLayer('xxxLabels').addTo(map);
       layerLabels = null,
       worldTransportation = L.esri.basemapLayer('ImageryTransportation');      
@@ -210,7 +216,7 @@
         map.removeLayer(layer);
       }
       if (basemap === 'OpenStreetMap') {
-        layer = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
+        layer = OpenStreetMap//L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png");
       }
       else {
         layer = L.esri.basemapLayer(basemap);
